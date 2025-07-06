@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://wbmagictools.netlify.app/sitemap.xml

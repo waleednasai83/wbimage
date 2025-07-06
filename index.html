@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Primary Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WB Magic Tools: Free AI Image Editor | Remove Backgrounds, Convert & Resize</title>
+    <meta name="description" content="Free online AI tools for instant background removal, image conversion (PNG/JPG/WebP) and smart resizing. No registration required - process images in seconds.">
+    <meta name="keywords" content="remove background, image converter, resize images, free image editor, PNG to JPG, WebP converter, AI photo editor">
+    
+    <!-- Preconnect and Preload -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"></noscript>
+    
+    <!-- Google Verification -->
+    <meta name="google-site-verification" content="AqFv-XYP5D11J10rU8461_tfC_gWWW6p8rbh6LDzdG4" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wbmagictools.com/">
+    <meta property="og:title" content="WB Magic Tools: Free AI-Powered Image Editor Online">
+    <meta property="og:description" content="Remove backgrounds, convert formats & resize images instantly with AI. Perfect for designers, developers & marketers.">
+    <meta property="og:image" content="https://wbmagictools.com/images/social-preview.webp">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://wbmagictools.com/">
+    <meta name="twitter:title" content="WB Magic Tools: AI Image Editor for Web Professionals">
+    <meta name="twitter:description" content="Free tools to remove backgrounds, convert formats & resize images instantly. No watermarks or sign-up required.">
+    <meta name="twitter:image" content="https://wbmagictools.com/images/social-preview.webp">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://wbmagictools.com" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "WB Magic Tools",
+      "url": "https://wbmagictools.com",
+      "description": "Free online AI tools for image background removal, format conversion and resizing",
+      "applicationCategory": "DesignApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "WB Magic Tools"
+      }
+    }
+    </script>
+    
+    <!-- Critical CSS -->
+    <style>
+        :root {
+            --primary: #6366f1;
+            --secondary: #8b5cf6;
+            --accent: #10b981;
+            --dark: #1e293b;
+            --light: #f8fafc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            min-height: 100vh;
+            padding: 1rem;
+            color: var(--dark);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 1rem auto;
+            background: rgba(255, 255, 255, 0.97);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            box-shadow: 0 1rem 3rem rgba(0,0,0,0.15);
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .menu button {
+            padding: 0.8rem 1rem;
+            border: none;
+            border-radius: 0.8rem;
+            background: var(--accent);
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .image-box img {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: contain;
+            border-radius: 0.5rem;
+            background: #f1f5f9;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Table Responsive Styles */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+
+        .feature-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        .feature-table th, .feature-table td {
+            padding: 0.8rem;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .feature-table th {
+            background-color: #f1f5f9;
+            color: var(--dark);
+        }
+
+        @media (min-width: 768px) {
+            .menu {
+                flex-direction: row;
+                justify-content: center;
+            }
+            .image-box img {
+                max-height: 350px;
+            }
+            .feature-table {
+                min-width: 100%;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .feature-table {
+                font-size: 0.9rem;
+            }
+            .feature-table th, .feature-table td {
+                padding: 0.6rem;
+            }
+        }
+    </style>
+    
+    <!-- Deferred CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Free AI Image Tools: Remove Backgrounds, Convert & Resize</h1>
+
+        <!-- Introduction Section -->
+        <div class="content-section">
+            <p>WB Magic Tools provides professional-grade image processing powered by AI. Our free online tools help designers, developers, and marketers optimize images instantly with:</p>
+            <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                <li>⚡ One-click background removal</li>
+                <li>🔄 Lossless format conversion (PNG, JPG, WebP)</li>
+                <li>📏 Smart image resizing with aspect ratio control</li>
+            </ul>
+            <p style="margin-top: 1rem;">No installation or registration required - process images directly in your browser! Learn more about <a href="https://www.remove.bg/f/background-removal" title="WB Magic Tools features">all our features</a> or check out our <a href="https://www.remove.bg/b/how-to-remove-image-backgrounds-in-illustrator" title="Getting started tutorial">getting started guide</a>.</p>
+        </div>
+
+        <!-- Tools Comparison Table -->
+        <div class="content-section">
+            <h2>Compare Our Image Tools</h2>
+            <div class="table-responsive">
+                <table class="feature-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Background Remover</th>
+                            <th>Image Converter</th>
+                            <th>Image Resizer</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Max Resolution</td>
+                            <td>5000×5000px</td>
+                            <td>8000×8000px</td>
+                            <td>10000×10000px</td>
+                        </tr>
+                        <tr>
+                            <td>Supported Formats</td>
+                            <td>PNG, JPG, JPEG</td>
+                            <td>PNG, JPG, JPEG, WebP</td>
+                            <td>PNG, JPG, JPEG</td>
+                        </tr>
+                        <tr>
+                            <td>Processing Time</td>
+                            <td>5-10 seconds</td>
+                            <td>Instant</td>
+                            <td>Instant</td>
+                        </tr>
+                        <tr>
+                            <td>Output Quality</td>
+                            <td>Transparent PNG</td>
+                            <td>Adjustable (60-100%)</td>
+                            <td>Lossless scaling</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="margin-top: 1rem;">For more details read about <a href="https://neilpatel.com/blog/image-optimization/" target="_blank" rel="noopener noreferrer" title="Google's image optimization guide">image optimization best practices</a>.</p>
+        </div>
+
+        <!-- How It Works Section -->
+        <div class="content-section">
+            <h2>How To Use Our Image Tools</h2>
+            <div class="guide-step">
+                <div class="step-number">1</div>
+                <div>
+                    <h3>Upload Your Image</h3>
+                    <p>Drag and drop or select any image file (PNG, JPG, WebP supported). Files are processed securely in your browser. Learn about <a href="https://www.remove.bg/help/a/what-images-are-supported" title="Supported image formats">supported formats</a>.</p>
+                    <picture>
+                        <img src="developers-4.png" alt="How to upload images to WB Magic Tools" class="screenshot" loading="lazy" width="800" height="450">
+                    </picture>
+                </div>
+            </div>
+            <div class="guide-step">
+                <div class="step-number">2</div>
+                <div>
+                    <h3>Choose Your Tool</h3>
+                    <p>Select between background removal, format conversion, or resizing. Each tool has advanced settings for professionals. See our <a href="https://www.youtube.com/watch?v=V1uOuZN5D1M" title="Image editing tutorials">tutorials section</a> for pro tips.</p>
+                </div>
+            </div>
+            <div class="guide-step">
+                <div class="step-number">3</div>
+                <div>
+                    <h3>Download & Use</h3>
+                    <p>Get your processed image instantly with one click. No watermarks, no account needed, unlimited free usage. Learn more about <a href="https://www.remove.bg/help/a/what-images-are-supported" title="Learn about image formats">image formats</a> or <a href="https://www.youtube.com/watch?v=KR7L2oSRlwY" title="Image editing tutorials">how to edit images</a> in our resources section.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu -->
+        <div class="menu">
+            <button onclick="showSection('bgRemoval')">Background Removal</button>
+            <button onclick="showSection('imageConverter')">Image Converter</button>
+            <button onclick="showSection('imageResizer')">Image Resizer</button>
+        </div>
+
+        <!-- Background Removal Section -->
+        <section id="bgRemovalSection">
+            <div class="feature-card">
+                <h2>Background Removal Tool</h2>
+                <p>Remove backgrounds from images automatically with our AI-powered tool. Perfect for product photos, profile pictures, and graphic design projects. Our advanced algorithm detects subjects with 95% accuracy and delivers clean, transparent PNG results in seconds. Learn more in our <a href="https://www.youtube.com/watch?v=_WaYqZSCiH4" title="Background removal tutorial">background removal tutorial</a>.</p>
+                
+                <div class="tip-card">
+                    <h4>Pro Tip</h4>
+                    <p>For best results, use images with high contrast between subject and background. Complex backgrounds may require manual touch-up in Photoshop. 
+            </div>
+
+            <div class="upload-section" id="bgDropZone">
+                <div class="upload-content">
+                    <i class="fas fa-magic fa-3x"></i>
+                    <h3 style="margin: 1rem 0; font-weight: 600;">Drag & Drop Your Image</h3>
+                    <p style="color: #64748b;">Supported formats: PNG, JPG, JPEG</p>
+                    <input type="file" id="bgFileInput" hidden accept="image/*">
+                </div>
+            </div>
+
+            <div class="loading" id="bgLoading">
+                <i class="fas fa-spinner"></i>
+                <p style="margin-top: 1rem; font-weight: 500;">Working Magic... ⚡</p>
+            </div>
+
+            <div id="bgPreviewSection">
+                <div class="image-container">
+                    <div class="image-box">
+                        <h3 style="margin-bottom: 1rem; color: var(--primary);">Original</h3>
+                        <picture>
+                            <img src="people-1.jpg" id="originalImg" alt="Original image before background removal" loading="lazy" width="800" height="600">
+                        </picture>
+                    </div>
+                    <div class="image-box">
+                        <h3 style="margin-bottom: 1rem; color: var(--accent);">Magic Result</h3>
+                        <picture>
+                            <img src="people-1-transparent2.jpg" id="resultImg" alt="Image with background removed" loading="lazy" width="800" height="600">
+                        </picture>
+                        <a id="bgDownloadBtn" class="download-btn" download="no-bg.png">
+                            <i class="fas fa-cloud-download-alt"></i> Download Magic
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Converter Section -->
+        <section id="imageConverterSection" style="display: none;">
+            <div class="feature-card">
+                <h2>Image Format Converter</h2>
+                <p>Convert between image formats without quality loss. Our tool supports PNG, JPG, JPEG, and WebP formats. Perfect for optimizing images for web, mobile apps, or print. WebP conversion can reduce file sizes by up to 30% compared to JPG while maintaining visual quality. Read our <a href="https://theplusaddons.com/blog/jpg-vs-webp/#:~:text=JPEG%20(JPG)%20is%20a%20widely,faster%20loading%20times%20on%20websites." title="WebP vs JPG comparison">WebP vs JPG comparison</a> to learn more.</p>
+                
+                <div class="tip-card">
+                    <h4>Pro Tip</h4>
+                    <p>Use WebP for websites to improve loading times. For print materials, stick with PNG or high-quality JPG. 
+            </div>
+
+            <div class="upload-section" id="converterDropZone">
+                <div class="upload-content">
+                    <i class="fas fa-cloud-upload-alt fa-3x"></i>
+                    <h3 style="margin: 1rem 0; font-weight: 600;">Drag & Drop Image</h3>
+                    <p style="color: #64748b;">Supports PNG, JPG, JPEG, WebP</p>
+                    <input type="file" id="converterFileInput" hidden accept="image/*">
+                </div>
+            </div>
+
+            <div class="image-container">
+                <img id="converterPreviewImg" alt="Image preview for conversion" style="display: none;" loading="lazy" width="800" height="600">
+            </div>
+
+            <div class="format-options">
+                <button class="format-btn" onclick="convertImage('png')">Convert to PNG</button>
+                <button class="format-btn" onclick="convertImage('jpeg')">Convert to JPG</button>
+                <button class="format-btn" onclick="convertImage('webp')">Convert to WebP</button>
+            </div>
+
+            <a id="converterDownloadBtn" class="download-btn" style="display: none;">
+                <i class="fas fa-download"></i> Download Converted Image
+            </a>
+        </section>
+
+        <!-- Image Resizer Section -->
+        <section id="imageResizerSection" style="display: none;">
+            <div class="feature-card">
+                <h2>Image Resizer Tool</h2>
+                <p>Resize images to exact dimensions while maintaining quality. Perfect for social media posts, website banners, or email attachments. Our smart resizing algorithm preserves sharpness and detail even when downscaling. Maintain aspect ratio automatically or specify exact dimensions. Check our <a href="https://sproutsocial.com/insights/social-media-image-sizes-guide/" title="Social media image sizes">social media size guide</a> for optimal dimensions.</p>
+                
+                <div class="tip-card">
+                    <h4>Pro Tip</h4>
+                    <p>For social media, use these optimal sizes: Instagram (1080x1080), Facebook (1200x630), Twitter (1024x512). 
+                </div>
+            </div>
+
+            <div class="upload-section" id="resizerDropZone">
+                <div class="upload-content">
+                    <i class="fas fa-image fa-3x"></i>
+                    <h3 style="margin: 1rem 0; font-weight: 600;">Upload Your Image</h3>
+                    <p style="color: #64748b;">Supported formats: PNG, JPG, JPEG</p>
+                    <input type="file" id="resizerFileInput" accept="image/*" style="display: none;">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Original Dimensions:</label>
+                <span id="originalDimensions" style="font-weight: 500; color: #64748b;"></span>
+            </div>
+
+            <div class="input-group">
+                <label for="width">Width:</label>
+                <input type="number" id="width">
+                
+                <label for="height">Height:</label>
+                <input type="number" id="height">
+            </div>
+
+            <div class="ratio-lock">
+                <input type="checkbox" id="lockRatio" checked>
+                <label for="lockRatio">Maintain Aspect Ratio</label>
+            </div>
+
+            <button class="resize-btn" onclick="resizeImage()">
+                <i class="fas fa-expand-arrows-alt"></i> Resize Image
+            </button>
+
+            <button class="download-btn" id="resizerDownloadBtn" style="display: none;" onclick="downloadResizedImage()">Download</button>
+
+            <div id="resizerPreviewContainer">
+                <img id="resizerPreview" alt="Resized image preview" loading="lazy" width="800" height="600">
+                <canvas id="resizerCanvas" style="display: none;"></canvas>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <div class="content-section">
+            <h2>Helpful Resources</h2>
+            <div class="feature-card">
+                <h3>Learn More About Image Editing</h3>
+                <p>Expand your knowledge with these recommended resources:</p>
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=_WaYqZSCiH4&t=1s" title="Background removal tutorial">Our Background Removal Tutorial</a></li>
+                    <li><a href="https://www.shopify.com/blog/7412852-10-must-know-image-optimization-tips" target="_blank" rel="noopener noreferrer">Smashing Magazine's Image Optimization Guide</a></li>
+                    <li><a href="https://cloudinary.com/guides/image-formats/jpeg-vs-webp" title="WebP vs JPG comparison">WebP vs JPG: When to Use Each Format</a></li>
+                    <li><a href="https://www.shopify.com/blog/7412852-10-must-know-image-optimization-tips" target="_blank" rel="noopener noreferrer">The Comprehensive Image Optimization Guide</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Testimonials Section -->
+        <div class="content-section">
+            <h2>What Our Users Say</h2>
+            <div class="testimonial">
+                <p>WB Magic Tools saved me hours of work on my e-commerce site. The background remover works better than some paid tools I've tried! 
+                <div class="testimonial-author">
+                    <i class="fas fa-user"></i> Sarah K., E-commerce Manager
+                </div>
+            </div>
+            <div class="testimonial">
+                <p>As a blogger, I need to optimize images daily. The format converter and resizer help me prepare perfect images for my posts in seconds. 
+                <div class="testimonial-author">
+                    <i class="fas fa-user"></i> Mark T., Content Creator
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="content-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Is WB Magic Tools really free to use?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Yes! All our tools are completely free with no hidden costs. We don't require registration and don't add watermarks to your processed images. 
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    What happens to my uploaded images?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Your privacy is important to us. All uploaded images are processed in your browser and never sent to our servers. Files are automatically deleted after processing.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Can I process multiple images at once?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    Currently, our tools process one image at a time. For batch processing, we recommend repeating the process for each file or checking back for future updates. 
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    What's the maximum file size you support?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    It varies by tool: Background Remover (5MB), Image Converter (10MB), Image Resizer (15MB). We may increase these limits in future updates. 
+                </div>
+            </div>
+          
+    </div>
+
+    <!-- Non-Critical CSS -->
+    <style>
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            margin: 1rem 0;
+            color: var(--secondary);
+        }
+
+        /* Content Sections */
+        .content-section {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: rgba(248, 250, 252, 0.7);
+            border-radius: 1rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.05);
+        }
+
+        .testimonial {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            margin: 1rem 0;
+            position: relative;
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.05);
+        }
+
+        .testimonial:before {
+            content: '"';
+            font-size: 4rem;
+            position: absolute;
+            top: 0;
+            left: 1rem;
+            color: rgba(99, 102, 241, 0.1);
+            line-height: 1;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary);
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .testimonial-author i {
+            margin-right: 0.5rem;
+            color: var(--accent);
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: var(--primary);
+            cursor: pointer;
+            padding: 0.8rem;
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            padding: 1rem;
+            background: white;
+            border-radius: 0 0 0.5rem 0.5rem;
+            margin-top: -0.5rem;
+            display: none;
+        }
+
+        .faq-question.active + .faq-answer {
+            display: block;
+        }
+
+        .guide-step {
+            display: flex;
+            margin-bottom: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            background: var(--primary);
+            color: white;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+
+        .tip-card {
+            background: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin: 1rem 0;
+            border-left: 4px solid var(--accent);
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.05);
+        }
+
+        .tip-card h4 {
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .screenshot {
+            width: 100%;
+            border-radius: 0.5rem;
+            margin: 1rem 0;
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+            border: 1px solid #e2e8f0;
+        }
+
+        .screenshot-caption {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-top: -0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Upload Sections */
+        .upload-section {
+            border: 2px dashed rgba(99, 102, 241, 0.3);
+            border-radius: 1rem;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            background: rgba(248, 250, 252, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .upload-section:hover {
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.8);
+            transform: translateY(-3px);
+        }
+
+        .upload-section.dragover {
+            border-color: var(--accent);
+            background: rgba(16, 185, 129, 0.1);
+        }
+
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .image-box {
+            background: white;
+            padding: 1rem;
+            border-radius: 1rem;
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .loading i {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+            border-radius: 0.8rem;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 0.5rem 1rem rgba(99, 102, 241, 0.2);
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0.8rem 1.5rem rgba(99, 102, 241, 0.3);
+        }
+
+        .format-options {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .format-btn {
+            padding: 0.8rem 1rem;
+            border: none;
+            border-radius: 0.8rem;
+            background: var(--accent);
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .format-btn:hover {
+            background: #059669;
+        }
+
+        .input-group {
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 0.8rem;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="number"]:focus {
+            border-color: var(--primary);
+            outline: none;
+        }
+
+        .ratio-lock {
+            display: flex;
+            align-items: center;
+            margin: 1rem 0;
+        }
+
+        .ratio-lock label {
+            margin-left: 0.5rem;
+            font-weight: 500;
+        }
+
+        #resizerPreview {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.8rem;
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+            display: none;
+        }
+
+        #resizerPreviewContainer {
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        .resize-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+            border-radius: 0.8rem;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            box-shadow: 0 0.5rem 1rem rgba(99, 102, 241, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .resize-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent);
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.5s ease;
+        }
+
+        .resize-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0.8rem 1.5rem rgba(99, 102, 241, 0.3);
+        }
+
+        .resize-btn:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .resize-btn i {
+            font-size: 1.2rem;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        @media (min-width: 768px) {
+            .upload-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .image-container {
+                flex-direction: row;
+            }
+
+            .format-options {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            input[type="number"] {
+                width: 120px;
+            }
+        }
+    </style>
+
+    <!-- Deferred JavaScript -->
+    <script>
+        // Toggle FAQ answers
+        function toggleFAQ(element) {
+            element.classList.toggle('active');
+            const icon = element.querySelector('i');
+            if (element.classList.contains('active')) {
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            } else {
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            }
+        }
+
+        // Show/Hide Sections
+        function showSection(sectionId) {
+            document.getElementById('bgRemovalSection').style.display = sectionId === 'bgRemoval' ? 'block' : 'none';
+            document.getElementById('imageConverterSection').style.display = sectionId === 'imageConverter' ? 'block' : 'none';
+            document.getElementById('imageResizerSection').style.display = sectionId === 'imageResizer' ? 'block' : 'none';
+            
+            // Scroll to section
+            document.getElementById(sectionId + 'Section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Background Removal Section
+        const bgDropZone = document.getElementById('bgDropZone');
+        const bgFileInput = document.getElementById('bgFileInput');
+        const bgLoading = document.getElementById('bgLoading');
+        const bgPreviewSection = document.getElementById('bgPreviewSection');
+        const originalImg = document.getElementById('originalImg');
+        const resultImg = document.getElementById('resultImg');
+        const bgDownloadBtn = document.getElementById('bgDownloadBtn');
+        const API_KEY = '6DwfprJ1BivNqpo4npXcufff'; // Replace with your API key
+
+        bgDropZone.addEventListener('click', () => bgFileInput.click());
+
+        ['dragover', 'dragleave', 'drop'].forEach(event => {
+            bgDropZone.addEventListener(event, (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+            });
+        });
+
+        bgDropZone.addEventListener('dragover', () => {
+            bgDropZone.classList.add('dragover');
+        });
+
+        bgDropZone.addEventListener('dragleave', () => {
+            bgDropZone.classList.remove('dragover');
+        });
+
+        bgDropZone.addEventListener('drop', (e) => {
+            handleBgFile(e.dataTransfer.files[0]);
+            bgDropZone.classList.remove('dragover');
+        });
+
+        bgFileInput.addEventListener('change', (e) => {
+            handleBgFile(e.target.files[0]);
+        });
+
+        async function handleBgFile(file) {
+            if (!file) return;
+            if (!file.type.startsWith('image/')) {
+                alert('Please upload an image file');
+                return;
+            }
+
+            originalImg.src = URL.createObjectURL(file);
+            bgLoading.style.display = 'block';
+            bgPreviewSection.style.opacity = '0';
+
+            const formData = new FormData();
+            formData.append('image_file', file);
+
+            try {
+                const response = await fetch('https://api.remove.bg/v1.0/removebg', {
+                    method: 'POST',
+                    headers: {
+                        'X-Api-Key': API_KEY
+                    },
+                    body: formData
+                });
+
+                if (!response.ok) throw new Error('Background removal failed');
+
+                const blob = await response.blob();
+                const resultUrl = URL.createObjectURL(blob);
+                resultImg.src = resultUrl;
+                bgDownloadBtn.href = resultUrl;
+
+                bgLoading.style.display = 'none';
+                bgPreviewSection.style.display = 'block';
+                setTimeout(() => {
+                    bgPreviewSection.style.opacity = '1';
+                    bgPreviewSection.style.transform = 'translateY(0)';
+                }, 50);
+            } catch (error) {
+                console.error(error);
+                bgLoading.innerHTML = `
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <p style="color: #ef4444; margin-top: 1rem;">${error.message}</p>
+                `;
+            }
+        }
+
+        // Image Converter Section
+        const converterDropZone = document.getElementById('converterDropZone');
+        const converterFileInput = document.getElementById('converterFileInput');
+        const converterPreviewImg = document.getElementById('converterPreviewImg');
+        const converterDownloadBtn = document.getElementById('converterDownloadBtn');
+        let currentImage = null;
+
+        converterDropZone.addEventListener('click', () => converterFileInput.click());
+
+        ['dragover', 'dragleave', 'drop'].forEach(event => {
+            converterDropZone.addEventListener(event, (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+            });
+        });
+
+        converterDropZone.addEventListener('dragover', () => {
+            converterDropZone.classList.add('dragover');
+        });
+
+        converterDropZone.addEventListener('dragleave', () => {
+            converterDropZone.classList.remove('dragover');
+        });
+
+        converterDropZone.addEventListener('drop', (e) => {
+            converterDropZone.classList.remove('dragover');
+            const file = e.dataTransfer.files[0];
+            if (file && file.type.startsWith('image/')) {
+                handleConverterFile(file);
+            } else {
+                alert('Please upload a valid image file.');
+            }
+        });
+
+        converterFileInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file && file.type.startsWith('image/')) {
+                handleConverterFile(file);
+            } else {
+                alert('Please upload a valid image file.');
+            }
+        });
+
+        function handleConverterFile(file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                converterPreviewImg.src = e.target.result;
+                converterPreviewImg.style.display = 'block';
+                currentImage = converterPreviewImg;
+                converterDownloadBtn.style.display = 'none';
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function convertImage(format) {
+            if (!currentImage) {
+                alert('Please upload an image first!');
+                return;
+            }
+
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = currentImage.naturalWidth;
+            canvas.height = currentImage.naturalHeight;
+            ctx.drawImage(currentImage, 0, 0);
+
+            const dataUrl = canvas.toDataURL(`image/${format}`);
+            converterDownloadBtn.href = dataUrl;
+            converterDownloadBtn.download = `converted-image.${format}`;
+            converterDownloadBtn.style.display = 'inline-block';
+            alert(`Image converted to ${format.toUpperCase()}!`);
+        }
+
+        // Image Resizer Section
+        const resizerDropZone = document.getElementById('resizerDropZone');
+        const resizerFileInput = document.getElementById('resizerFileInput');
+        const resizerPreview = document.getElementById('resizerPreview');
+        const resizerCanvas = document.getElementById('resizerCanvas');
+        const resizerDownloadBtn = document.getElementById('resizerDownloadBtn');
+        const widthInput = document.getElementById('width');
+        const heightInput = document.getElementById('height');
+        const lockRatio = document.getElementById('lockRatio');
+        let originalWidth, originalHeight, aspectRatio;
+
+        resizerDropZone.addEventListener('click', () => resizerFileInput.click());
+
+        ['dragover', 'dragleave', 'drop'].forEach(event => {
+            resizerDropZone.addEventListener(event, (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+            });
+        });
+
+        resizerDropZone.addEventListener('dragover', () => {
+            resizerDropZone.classList.add('dragover');
+        });
+
+        resizerDropZone.addEventListener('dragleave', () => {
+            resizerDropZone.classList.remove('dragover');
+        });
+
+        resizerDropZone.addEventListener('drop', (e) => {
+            resizerDropZone.classList.remove('dragover');
+            const file = e.dataTransfer.files[0];
+            if (file && file.type.startsWith('image/')) {
+                handleResizerFile(file);
+            } else {
+                alert('Please upload a valid image file.');
+            }
+        });
+
+        resizerFileInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file && file.type.startsWith('image/')) {
+                handleResizerFile(file);
+            } else {
+                alert('Please upload a valid image file.');
+            }
+        });
+
+        function handleResizerFile(file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                resizerPreview.src = e.target.result;
+                resizerPreview.style.display = 'block';
+
+                resizerPreview.onload = function() {
+                    originalWidth = resizerPreview.naturalWidth;
+                    originalHeight = resizerPreview.naturalHeight;
+                    aspectRatio = originalWidth / originalHeight;
+
+                    document.getElementById('originalDimensions').textContent = 
+                        `${originalWidth}px × ${originalHeight}px`;
+
+                    widthInput.value = originalWidth;
+                    heightInput.value = originalHeight;
+                };
+            };
+            reader.readAsDataURL(file);
+        }
+
+        widthInput.addEventListener('input', function() {
+            if (lockRatio.checked) {
+                heightInput.value = Math.round(widthInput.value / aspectRatio);
+            }
+        });
+
+        heightInput.addEventListener('input', function() {
+            if (lockRatio.checked) {
+                widthInput.value = Math.round(heightInput.value * aspectRatio);
+            }
+        });
+
+        function resizeImage() {
+            const newWidth = parseInt(widthInput.value);
+            const newHeight = parseInt(heightInput.value);
+
+            if (!newWidth || !newHeight) {
+                alert('Please enter valid dimensions');
+                return;
+            }
+
+            resizerCanvas.width = newWidth;
+            resizerCanvas.height = newHeight;
+
+            const ctx = resizerCanvas.getContext('2d');
+            ctx.drawImage(resizerPreview, 0, 0, newWidth, newHeight);
+            resizerDownloadBtn.style.display = 'inline-block';
+        }
+
+        function downloadResizedImage() {
+            const link = document.createElement('a');
+            link.download = 'resized-image.png';
+            link.href = resizerCanvas.toDataURL('image/png');
+            link.click();
+        }
+    </script>
+</body>
+</html>
